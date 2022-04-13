@@ -1,0 +1,29 @@
+html, body {
+	font-family: 'Akshar', sans-serif;
+	width: 100%;
+	height: 100%;
+
+	/* Material UI default darkmode Colors*/
+	background-color: #121212;
+	color: #ffffff;
+
+	/* Hide ugly Scroll Bar*/
+	overflow: hidden;
+}
+
+.hero {
+	width: 100%;
+	height: 100%;
+	margin: 15px;
+}
+
+.two-split {
+	display: grid;
+	width: auto;
+	grid-template-columns: 50% 50%;
+}
+
+.two-split-flex {
+	display: flex;
+	gap: 10px;
+}
