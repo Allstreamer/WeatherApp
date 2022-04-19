@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- https://developer.mozilla.org/en-US/docs/Glossary/Doctype -->
+<html lang="en"> <!-- HTML Content Tag with language specified -->
 <head>
+	<!-- Character Encoding that the html document uses -->
 	<meta charset="UTF-8">
+
+	<!-- Compatibility Stuff -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Weather Now</title>
 
+	<!-- Skeleton CSS Normalize -->
 	<link rel="stylesheet" href="normalize.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="form_style.css">
 	<link rel="stylesheet" href="style.css">
 
 	<!-- Google Fonts -->
@@ -15,22 +23,53 @@
 	<link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="hero two-split">
-		<div>
+	<!-- Main Content card containing weather info -->
+	<div class="card-view">
+		<!-- Location input -->
+		<div class="form_group field">
+			<input 
+				type="input" 
+				class="form_field" 
+				placeholder="lat" 
+				name="lat"
+				id="name"
+				required
+			/>
+			<label 
+				for="lat"
+				class="form_label"
+			>Latitude</label>
+		</div>
+		<div class="form_group field">
+			<input 
+				type="input" 
+				class="form_field" 
+				placeholder="lon" 
+				name="lon"
+				id="name"
+				required
+			/>
+			<label 
+				for="lon"
+				class="form_label"
+			>Longitude</label>
+		</div>
+		<div class="location"></div>
+		<div class="temp">
+			<div class="current_temp">10</div>
 			<div>
-				<h1 id="location">-</h1>
-				<div class="two-split-flex">
-					<h6 id="lat">0.0</h6>
-					<h6 id="lon">0.0</h6>
-				</div>
+				<div class="max_temp">14.0</div>
+				<div class="min_temp">3.0</div>
 			</div>
 		</div>
-		<div>
-
-		</div>
+		<div class="humidity">90%</div>
+		<div class="wind_direction">↑</div>
+		<div class="wind_speed">10.0 km/h</div>
 	</div>
 </body>
 
+	<!-- JQuerry Used for JSON API Querring and Element selection -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- My Custom JS code -->
 	<script src="./index.js"></script>
 </html>
