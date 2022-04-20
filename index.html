@@ -13,63 +13,77 @@
 	<!-- Skeleton CSS Normalize -->
 	<link rel="stylesheet" href="normalize.css">
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="form_style.css">
-	<link rel="stylesheet" href="style.css">
+	<!-- JQuerry Used for JSON API Querring and Element selection -->
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="form_style.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Custom JS -->
+	<script defer src="./index.js"></script>
+
 </head>
 <body>
 	<!-- Main Content card containing weather info -->
 	<div class="card-view">
-		<!-- Location input -->
-		<div class="form_group field">
-			<input 
-				type="input" 
-				class="form_field" 
-				placeholder="lat" 
-				name="lat"
-				id="name"
-				required
-			/>
-			<label 
-				for="lat"
-				class="form_label"
-			>Latitude</label>
-		</div>
-		<div class="form_group field">
-			<input 
-				type="input" 
-				class="form_field" 
-				placeholder="lon" 
-				name="lon"
-				id="name"
-				required
-			/>
-			<label 
-				for="lon"
-				class="form_label"
-			>Longitude</label>
+		<div class="flex">
+			<!-- Location input -->
+			<div class="form_group field">
+				<input 
+					type="input" 
+					class="form_field" 
+					placeholder="lat" 
+					name="lat"
+					id="name"
+					required
+				/>
+				<label 
+					for="lat"
+					class="form_label"
+				>Latitude</label>
+			</div>
+			<div class="form_group field">
+				<input 
+					type="input" 
+					class="form_field" 
+					placeholder="lon" 
+					name="lon"
+					id="name"
+					required
+				/>
+				<label
+					for="lon"
+					class="form_label"
+				>Longitude</label>
+			</div>
 		</div>
 		<div class="location"></div>
 		<div class="temp">
-			<div class="current_temp">10</div>
-			<div>
-				<div class="max_temp">14.0</div>
-				<div class="min_temp">3.0</div>
+			<div class="current_temp">10 C°</div>
+			<div class="top_bottom">
+				<div class="max_temp">14.0 C°<div>↑</div></div>
+				<div class="min_temp">3.0 C°<div>↓</div></div>
 			</div>
 		</div>
-		<div class="humidity">90%</div>
-		<div class="wind_direction">↑</div>
-		<div class="wind_speed">10.0 km/h</div>
+		<div class="bottom">
+			<div class="humidity">
+				<span class="material-icons">cloud</span>
+				90%
+			</div>
+			<div class="wind_speed">
+				<span class="material-icons">air</span>
+				10.0 km/h
+			</div>
+		</div>
 	</div>
 </body>
-
-	<!-- JQuerry Used for JSON API Querring and Element selection -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<!-- My Custom JS code -->
-	<script src="./index.js"></script>
 </html>

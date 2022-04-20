@@ -2,4 +2,65 @@ html, body {
 	font-family: 'Akshar', sans-serif;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+	background-image: url("./clouds.jpg");
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.card-view {
+	height: 100%;
+
+	margin: 20px;
+	padding: 30px;
+	border-radius: 20px;
+
+	background-color: rgba(18, 18, 18, 0.9);
+	color: white;
+}
+
+.temp {
+	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.current_temp {
+	font-size: 60px;
+}
+
+.top_bottom {
+	position: relative;
+}
+
+.top_bottom .max_temp {
+	display: flex;
+}
+
+.top_bottom .min_temp {
+	display: flex;
+
+	position: absolute;
+	bottom: 8px;
+}
+
+.bottom {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	bottom: 0px;
+}
+.bottom .humidity {
+	text-align: left;
+	width: 100%;
+}
+.bottom .wind_speed {
+	text-align: right;
+	width: 100%;
 }
