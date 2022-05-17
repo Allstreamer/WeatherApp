@@ -12,6 +12,9 @@ html, body {
 	padding-left: 100px;
 	padding-right: 100px;
 }
+.getweather {
+	color:black;
+}
 
 .card-view {
 	height: 100%;
